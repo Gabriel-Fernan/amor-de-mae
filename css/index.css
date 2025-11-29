@@ -1,0 +1,23 @@
+:root{
+    --vermelho: #B0252D;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar{
+    display: flex;
+    background-color: var(--vermelho) !important;
+    justify-content: space-between;
+    gap: 70%;
+}
+
+.logo{
+    display: flex;
+    background-color: var(--vermelho) !important;
+    justify-content: space-between 20px;
+    gap: 70%;
+    align-items: flex-start;
+}
