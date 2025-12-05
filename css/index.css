@@ -184,7 +184,16 @@ html{
     justify-content: flex-end;
     position: relative;
     background-color: var(--rosa); /* fundo rosa por trás da imagem */
-    padding: 0; /* sem padding para a imagem ocupar totalmente */
+    padding: 12px; /* espaço/borda ao redor da imagem */
+    border-radius: 8px;
+    /* desenha o background (imagem) apenas na área de conteúdo, preservando o padding como borda rosa */
+    background-origin: content-box;
+    background-clip: content-box;
+}
+
+/* background-image moved from inline HTML */
+.overlay-image{
+    background-image: url('../img/voce-ja-amou-hoje.jpg');
 }
 
 .overlay-image::before{
@@ -305,10 +314,402 @@ html{
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
+/* styles moved from inline img attributes in index.html */
+.group-image img{
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
 @media (max-width: 600px){
     .group-heading p{ font-size: 12px; }
     .group-image{ min-height: 220px; }
+    .group-image img{ height: 220px; }
 }
+
+/* seção História (rodapé informativo) */
+.history-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 12px;
+    background-color: transparent;
+}
+
+.history-card{
+    width: 100%;
+    max-width: 1000px;
+    background-color: var(--branco);
+    border-radius: 14px;
+    padding: 22px 26px;
+    border: 2px solid var(--vermelho);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.history-title{
+    color: var(--vermelho);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.history-text p{
+    color: #333;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 900px){
+    .history-card{ padding: 18px; }
+    .history-title{ font-size: 18px; }
+    .history-text p{ font-size: 14px; }
+}
+
+@media (max-width: 600px){
+    .history-card{ padding: 14px; }
+    .history-text p{ font-size: 13px; }
+}
+
+/* espaçador grande usado quando o dropdown foi removido */
+.big-spacer{
+    width: 100%;
+    height: 160px;
+}
+
+@media (min-width: 1200px){
+    .big-spacer{ height: 220px; }
+}
+
+
+/* Seção Valores (dropdown) */
+.values-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 22px 12px 48px;
+    background-color: transparent;
+}
+
+.values-wrap{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.values-label{
+    font-weight: 700;
+    color: var(--vermelho);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.values-control{
+    display: block;
+}
+
+.values-select{
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 2px solid rgba(176,36,44,0.15);
+    background-color: var(--branco);
+    font-size: 15px;
+    color: #222;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    cursor: pointer;
+}
+
+.values-select:focus{
+    outline: none;
+    border-color: var(--vermelho);
+}
+
+@media (max-width: 600px){
+    .values-wrap{ max-width: 100%; }
+    .values-select{ padding: 10px 12px; font-size: 14px; }
+}
+
+/* Seção destaque — título e área de imagem (modelo da imagem) */
+.group-hero{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 22px 12px;
+    background-color: transparent;
+}
+
+.group-area{
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--rosa);
+    padding: 30px;
+    border-radius: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+.group-card{
+    width: 100%;
+    max-width: 1000px;
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid var(--vermelho);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.group-title{
+    color: var(--vermelho);
+    font-size: 22px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.group-photo{
+    width: 100%;
+    height: 360px;
+    background-color: #e6e6e6; /* placeholder grey */
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+@media (max-width: 900px){
+    .group-area{ padding: 20px; border-radius: 28px; }
+    .group-card{ padding: 14px; }
+    .group-photo{ height: 260px; }
+}
+
+@media (max-width: 600px){
+    .group-photo{ height: 200px; }
+    .group-title{ font-size: 18px; }
+}
+
+/* seção Endereço */
+.address-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 24px 12px;
+    background-color: transparent;
+}
+
+.address-area{
+    width: 100%;
+    max-width: 1000px;
+    background-color: var(--rosa);
+    padding: 18px;
+    border-radius: 18px;
+}
+
+.address-card{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--branco);
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.address-left{
+    flex: 1 1 40%;
+}
+
+.address-title{
+    color: var(--vermelho);
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.address-lines p{
+    margin: 6px 0;
+    color: #222;
+    font-size: 14px;
+}
+
+.address-right{
+    flex: 1 1 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.address-right img{
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* iframe do mapa — responsivo e sem borda */
+.address-right iframe{
+    width: 100%;
+    height: 140px;
+    border: 0;
+    border-radius: 8px;
+    display: block;
+}
+
+@media (max-width: 900px){
+    .address-card{ flex-direction: column; align-items: stretch; }
+    .address-right img{ height: 200px; }
+    .address-right iframe{ height: 200px; }
+}
+
+
+/* Seção com gradient (antes do footer) */
+.gradient-section{
+    width: 100%;
+    background: linear-gradient(180deg, #FCD58B 0%, #967F53 100%);
+    padding: 24px 12px 16px;
+}
+
+.gradient-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+}
+
+.gradient-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.gradient-logo{ 
+    width: 180px; 
+    height: auto; 
+    display: block; 
+    border-radius: 8px; 
+}
+
+.gradient-center{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gradient-center p{
+    margin: 0;
+    color: #222;
+    font-weight: 700;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px){
+    .gradient-container{ flex-direction: column; gap: 16px; }
+    .gradient-logo{ width: 120px; }
+    .gradient-center p{ font-size: 16px; }
+}
+
+@media (max-width: 600px){
+    .gradient-section{ padding: 16px 12px 12px; }
+    .gradient-center p{ font-size: 14px; }
+    .gradient-logo{ width: 100px; }
+    .gradient-placeholder{ width: 100px; height: 40px; }
+}
+
+/* Rodapé */
+.site-footer{
+    width: 100%;
+    background-color: var(--vermelho);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--branco);
+}
+
+.footer-logos{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.footer-logos a{
+    display: flex;
+    align-items: center;
+}
+
+.footer-logos img{
+    display: block;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.footer-center-info{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-center-info p{
+    margin: 0;
+    color: var(--branco);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.footer-placeholder{
+    width: 140px;
+    height: 60px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 8px;
+}
+
+@media (max-width: 900px){
+    .site-footer{ flex-wrap: wrap; justify-content: center; }
+    .footer-logos{ order: 1; }
+    .footer-center-info{ order: 2; width: 100%; }
+    .footer-logo-right{ order: 3; }
+    .footer-center-info p{ font-size: 12px; }
+    .footer-logo{ width: 50px; }
+}
+
+@media (max-width: 600px){
+    .site-footer{ padding: 10px; }
+    .footer-logos img{ width: 24px; height: 24px; }
+    .footer-center-info p{ font-size: 11px; }
+    .footer-logo{ width: 40px; }
+}
+
+
+
 
 /* seção de cards com molduras (somente molduras, sem imagens) */
 .cards-section{

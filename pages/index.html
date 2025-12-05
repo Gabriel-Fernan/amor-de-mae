@@ -40,7 +40,7 @@
     </section>
 
     <section class="overlay-section">
-        <div class="overlay-image" style="background-image: url('../img/voce-ja-amou-hoje.jpg')">
+        <div class="overlay-image">
             <div class="overlay-text">
                 <p class="overlay-line voce-ja">VOCÊ JÁ</p>
                 <p class="overlay-line amou">AMOU</p>
@@ -49,12 +49,11 @@
         </div>
     </section>
     
-    <!-- título acima das imagens -->
+        <!-- título acima das imagens (cards) -->
     <div class="cards-heading">
         <p>HÁ DIAS QUE PASSAM. E HÁ DIAS QUE MARCAM. VEM VIVER UM DESSES DIAS COM A GENTE !</p>
     </div>
-
-    <!-- seção de cards (molduras das imagens) -->
+        <!-- seção de cards (molduras das imagens) -->
     <section class="cards-section">
         <div class="cards-wrap">
             <div class="cards">
@@ -64,14 +63,114 @@
             </div>
         </div>
     </section>
-    
-    <!-- seção com imagem do grupo -->
+
+    <!-- seção com título acima da imagem (restaurada) -->
     <section class="group-section">
         <div class="group-heading">
-            <p>TEM DIAS QUE A GENTE NUNCA ESQUESCE E O PRÓXIMO PODE SER ESSE. VIM COMPARTILHAR COM A GENTE !</p>
+            <p>TEM DIAS QUE A GENTE NUNCA ESQUECE E O PRÓXIMO PODE SER ESSE. VEM COMPARTILHAR COM A GENTE.</p>
         </div>
-        <div class="group-image" style="background-image: url('../img/grupo-foto.jpg')"></div>
+        <div class="group-image">
+            <!-- coloque a imagem em ../img/grupo-foto.jpg para mostrá-la aqui -->
+            <img src="../img/grupo-foto.jpg" alt="Foto do grupo">
+        </div>
     </section>
     
+    <!-- seção destaque: título e área da imagem (placeholder) replicando o design solicitado -->
+    <section class="group-hero">
+        <div class="group-area">
+            <div class="group-card">
+                <h2 class="group-title">ASSOCIAÇÃO AMOR DE MÃE DE MARÍLIA</h2>
+                <div class="group-photo" role="img" aria-label="Placeholder da foto do grupo"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- seção História (adicionada ao final) -->
+    <section class="history-section">
+        <div class="history-card">
+            <h3 class="history-title">HISTÓRIA - ASSOCIAÇÃO AMOR DE MÃE</h3>
+            <div class="history-text">
+                <p>
+                    A Associação Amor de Mãe foi fundada por uma mulher que durante quatro anos fez parte da Pastoral da Criança da Paróquia Nossa Senhora do Perpétuo Socorro, Marluce da Silva Gripa realizava visitas domiciliares às famílias de baixa renda da região Centro Oeste de Marília, a fim de acompanhar o desenvolvimento social e cultural das crianças, adolescentes e suas famílias. Durante o tempo que participou desse trabalho Marluce percebeu a vulnerabilidade das famílias. Diante dessa situação, ela deu vida a Associação Amor de Mãe, um projeto que acolheu mães e filhos, as mães foram acolhidas através de cursos de capacitação e geração de renda e os filhos através de atividades culturais, oficinas socioeducativas e apoio escolar em seu contra turno.  Ao adquirir a tal formação as mães ao se inserirem no mercado de trabalho, continuaram contando com o apoio da Associação Amor de Mãe na assistência aos filhos.
+                </p>
+
+                <p>
+                    Desde 2007 é uma organização não governamental que busca melhorar a condição de vida de crianças, adolescentes e famílias que se encontram em situação de vulnerabilidade social da região oeste de Marília por meio de ações e projetos sócio educativos, culturais e de geração de renda.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- espaçador grande entre esta seção e o final da página -->
+    <div class="big-spacer" aria-hidden="true"></div>
+
+    
+    <!-- seção Endereço -->
+    <section class="address-section">
+        <div class="address-area">
+            <div class="address-card">
+                <div class="address-left">
+                    <h4 class="address-title">ENDEREÇO</h4>
+                    <div class="address-lines">
+                        <p>Rua João Franco Nascimento</p>
+                        <p>320 Jd. California</p>
+                        <p>Marília - SP</p>
+                    </div>
+                </div>
+                <div class="address-right">
+                    <!-- iframe do Google Maps apontando para o endereço -->
+                    <iframe
+                        src="https://www.google.com/maps?q=Rua+Jo%C3%A3o+Franco+Nascimento+320+Mar%C3%ADlia+SP&output=embed"
+                        title="Mapa - localização"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção com gradient -->
+    <section class="gradient-section">
+        <div class="gradient-container">
+            <div class="gradient-left">
+                <a href="index.html" class="gradient-logo-link">
+                    <img src="../img/logo-amor-de-mae.jpg" alt="Logo Amor de Mãe" class="gradient-logo">
+                </a>
+            </div>
+
+            <div class="gradient-center">
+                <p>TODAS AS NOSSAS AÇÕES SÃO MOTIVADAS</p>
+                <p>PELO AMOR</p>
+                <p>E PELO DESEJO DE AJUDAR OS OUTROS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <div class="footer-logos">
+            <a href="https://www.facebook.com/amordemaemarilia" target="_blank">
+                <img src="../img/logos-brancas/logo-facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.youtube.com/@amordemaedemarilia/videos" target="_blank">
+                <img src="../img/logos-brancas/logo-youtube.png" alt="YouTube">
+            </a>
+            <a href="https://www.instagram.com/amordemaemarilia/" target="_blank">
+                <img src="../img/logos-brancas/logo-instagram.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/5514997085326" target="_blank">
+                <img src="../img/logos-brancas/logo-whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+
+        <div class="footer-center-info">
+            <p>TODAS AS NOSSAS AÇÕES SÃO MOTIVADAS PELO AMOR E PELO DESEJO DE AJUDAR OS OUTROS</p>
+        </div>
+
+        <div class="footer-placeholder">
+        </div>
+    </footer>
+
 </body>
 </html>
