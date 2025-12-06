@@ -151,7 +151,10 @@ html{
 /* Gradient section styles (copied from index.css) */
 .gradient-section{
     width: 100%;
-    background: linear-gradient(180deg, #FCD58B 0%, #967F53 100%);
+    background-image: url('../img/degrade.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     padding: 24px 12px 16px;
 }
 

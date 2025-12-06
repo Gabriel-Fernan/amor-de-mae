@@ -123,6 +123,51 @@ body {
     border-radius: 16px;
 }
 
+/* Sponsors section (title + three placeholder boxes + call to action) */
+.sponsors-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0 12px; /* space below header and above donation options */
+}
+
+.sponsors-title{
+    color: var(--vermelho);
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin: 6px 0;
+}
+
+.sponsors-grid{
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsor-box{
+    width: 220px;
+    height: 110px;
+    border: 6px solid rgba(176,36,44,0.12); /* light pink border like mock */
+    background-color: transparent;
+    border-radius: 6px;
+}
+
+.sponsors-call{
+    margin-top: 12px;
+    color: #111;
+    font-size: 16px;
+    text-align: center;
+}
+
+@media (max-width: 720px){
+    .sponsors-grid{ flex-direction: column; gap: 14px; }
+    .sponsor-box{ width: 80%; max-width: 320px; height: 110px; }
+}
+
 .donation-card {
     background-color: var(--branco);
     border: 2px solid #e0e0e0;
@@ -336,7 +381,10 @@ body {
 /* Gradient section styles (copied from index.css) */
 .gradient-section{
     width: 100%;
-    background: linear-gradient(180deg, #FCD58B 0%, #967F53 100%);
+    background-image: url('../img/degrade.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     padding: 24px 12px 16px;
 }
 
