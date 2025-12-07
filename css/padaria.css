@@ -407,7 +407,7 @@ html{
 @media (max-width: 768px){
     .overlay-image.padaria-hero{ 
         min-height: 45vh; 
-        eight: 45vh; 
+        height: 45vh; 
     }
 }
 
