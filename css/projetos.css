@@ -337,3 +337,32 @@ html{
         height: 40px; 
     }
 }
+
+/* Container and header/back-arrow (copied from padaria.css for consistency) */
+.container{
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 8px 0;
+}
+
+.back-arrow{
+    position: absolute;
+    left: 20px;
+    font-size: 28px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.back-arrow:hover{ 
+    color: #c9a9a8; 
+}
