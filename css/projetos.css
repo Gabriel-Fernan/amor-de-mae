@@ -452,6 +452,27 @@ html{
     border-radius: 8px;
     box-shadow: inset 0 0 0 2px rgba(249,237,238,0.8);
     position: relative;
+    overflow: hidden; /* garante que nada vaze para fora do quadrado */
+}
+
+/* Garantir que a âncora e a imagem preencham o quadrado e a imagem fique contida dentro dele */
+.project-box a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    padding: 8px; /* espaço interno entre borda e imagem */
+    box-sizing: border-box;
+}
+
+.project-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* mantém a imagem inteira dentro do quadrado */
+    display: block;
 }
 
 .projects-call{
