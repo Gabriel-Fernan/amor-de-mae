@@ -298,3 +298,20 @@ html{
 .back-arrow:hover{ 
     color: #c9a9a8; 
 }
+
+img, picture, svg { max-width:100%; height:auto; display:block }
+.container{ padding-left:16px; padding-right:16px }
+.navbar .links{ flex-wrap:wrap }
+
+@media (max-width:1000px){
+    .products-grid{ grid-template-columns: repeat(3,1fr) }
+}
+@media (max-width:820px){
+    .products-grid{ grid-template-columns: repeat(2,1fr) }
+    .hero-top, .hero-placeholder.big-hero{ height:240px }
+}
+@media (max-width:420px){
+    .products-grid{ grid-template-columns: 1fr }
+    .product-card .thumb{ width:100px; height:100px }
+    .hero-top, .hero-placeholder.big-hero{ height:140px }
+}

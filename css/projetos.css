@@ -509,3 +509,17 @@ html{
     .projects-desc{ text-align: left; }
     .project-box{ width: 120px; }
 }
+
+img, picture, svg { max-width:100%; height:auto; display:block }
+.container{ padding-left:16px; padding-right:16px }
+.navbar .links{ flex-wrap:wrap }
+
+@media (max-width:1000px){
+    .projects-grid{ grid-template-columns: repeat(2, max-content); }
+}
+@media (max-width:820px){
+    .projects-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width:420px){
+    .project-box{ width: 100%; aspect-ratio: auto; }
+}

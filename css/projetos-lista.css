@@ -386,3 +386,17 @@ html{
     transform: translateY(-6px);
     box-shadow: 0 18px 36px rgba(16,16,16,0.08), inset 0 0 0 2px rgba(249,237,238,0.9);
 }
+
+img, picture, svg { max-width:100%; height:auto; display:block }
+.container{ padding-left:16px; padding-right:16px }
+.navbar .links{ flex-wrap:wrap }
+
+@media (max-width:1000px){
+    .project-detail-image img{ height: 220px }
+}
+@media (max-width:820px){
+    .project-detail-image img{ height: 180px }
+}
+@media (max-width:420px){
+    .project-detail-image img{ height: 140px }
+}

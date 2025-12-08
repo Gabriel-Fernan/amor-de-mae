@@ -400,6 +400,20 @@ html{
     line-height: 1.2; 
 }
 
+img, picture, svg { max-width:100%; height:auto; display:block }
+.container{ padding-left:16px; padding-right:16px }
+.navbar .links{ flex-wrap:wrap }
+
+@media (max-width:1000px){
+    .hero-image{ height: 220px }
+}
+@media (max-width:820px){
+    .overlay-image.padaria-hero{ min-height: 50vh }
+}
+@media (max-width:420px){
+    .hero-image{ height: 140px }
+}
+
 .voce-ja, .amou, .hoje{ 
     font-size: 32px; 
 }

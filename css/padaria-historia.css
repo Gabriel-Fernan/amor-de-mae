@@ -421,3 +421,18 @@ html{
 @media (max-width: 420px){
     .hero-top{ height: 140px; }
 }
+
+img, picture, svg { max-width:100%; height:auto; display:block }
+.container{ padding-left:16px; padding-right:16px }
+.navbar .links{ flex-wrap:wrap }
+
+@media (max-width:1000px){
+    .history-top{ gap:12px }
+}
+@media (max-width:820px){
+    .history-top{ flex-direction: column }
+    .hero-top{ height:200px }
+}
+@media (max-width:420px){
+    .history-side img{ max-width: 100%; }
+}

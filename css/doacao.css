@@ -238,6 +238,22 @@ body {
     }
 }
 
+img, picture, svg { max-width:100%; height:auto; display:block }
+.container{ padding-left:16px; padding-right:16px }
+.navbar .links{ flex-wrap:wrap }
+
+@media (max-width:1000px){
+    .donation-options{ grid-template-columns: repeat(2,1fr) }
+}
+@media (max-width:820px){
+    .sponsors-grid{ flex-direction: column }
+    .hero-top, .hero-placeholder.big-hero{ height:240px }
+}
+@media (max-width:420px){
+    .donation-options{ grid-template-columns: 1fr }
+    .sponsor-box{ width: 90%; }
+}
+
 @media (max-width: 480px) {
     .donation-options {
         grid-template-columns: 1fr;
